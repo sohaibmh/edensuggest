@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>My top Amazon products/services:</h1>
+        <h1>My top Amazon products/services</h1>
         <ul className="productsList">
           <li>
             <h3>Audible</h3>There’s only one word for this: love! Audible is an
