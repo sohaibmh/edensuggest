@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 import audible1 from '../images/audible-1.png';
 import audible2 from '../images/audible-2.jpeg';
@@ -7,12 +7,20 @@ import audible3 from '../images/audible-3.jpeg';
 const images = [audible1, audible2, audible3];
 
 const Audible = () => {
+  const [currentImage, setCurrentImage] = useState(images[0]);
+
+  console.log(currentImage);
+
   const otherImages = () => {
-    return images.map((e) => (
-      <span class="otherImageSpan">
+    return images.map((e, i) => (
+      <span class="otherImageSpan" key={i} onClick={() => setCurrentImage(e)}>
         <img className="otherImage" src={e} />
       </span>
     ));
+  };
+
+  const imageToShow = (img) => {
+    setCurrentImage(img);
   };
 
   return (
@@ -31,11 +39,11 @@ const Audible = () => {
           get a free 30 day trial.
         </p>
         <div className="imageContainer">
-          <img className="image" src={audible1} alt="audible free trial" />
+          <img className="image" src={currentImage} alt="audible free trial" />
         </div>
-        <div class="otherImagesContainer">{otherImages()}</div>
+        <div className="otherImagesContainer">{otherImages()}</div>
 
-        <div class="btnContainer">
+        <div className="btnContainer">
           <a href="#" class="btn">
             See Price
           </a>
