@@ -1,9 +1,20 @@
 import React from 'react';
 import './styles.scss';
+import audible1 from '../images/audible-1.png';
+import audible2 from '../images/audible-2.jpeg';
+import audible3 from '../images/audible-3.jpeg';
 
-const images = [];
+const images = [audible1, audible2, audible3];
 
 const Audible = () => {
+  const otherImages = () => {
+    return images.map((e) => (
+      <span class="otherImageSpan">
+        <img className="otherImage" src={e} />
+      </span>
+    ));
+  };
+
   return (
     <div>
       <div className="product">
@@ -19,8 +30,12 @@ const Audible = () => {
           recommend it to every single person! The great thing is that you can
           get a free 30 day trial.
         </p>
-        <div className="image">Images</div>
-        <div class="container">
+        <div className="imageContainer">
+          <img className="image" src={audible1} alt="audible free trial" />
+        </div>
+        <div class="otherImagesContainer">{otherImages()}</div>
+
+        <div class="btnContainer">
           <a href="#" class="btn">
             See Price
           </a>

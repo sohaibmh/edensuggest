@@ -1,5 +1,5 @@
 .product {
-  border: 1px solid gray;
+  border: 1px solid rgb(185, 148, 88);
   min-height: 90vh;
   max-height: 90vh;
   max-width: 100vh;
@@ -10,46 +10,115 @@
 }
 
 .description {
-  // min-width: 50vw;
-  // max-width: 50vw;
   text-align: justify;
-  // padding: 5vh;
   grid-column: 3/50;
   grid-row: 15/95;
 }
 
 .title {
-  // min-width: 50vw;
-  // max-width: 50vw;
   text-align: center;
-  // padding: 5vh;
   color: rgb(185, 148, 88);
   grid-column: 3/50;
 }
 
-.image {
-  border: 1px solid gray;
-  // min-height: 70vh;
-  // max-height: 70vh;
-  // max-width: 20vw;
-  // min-width: 32.5vw;
-  background-color: darkslategray;
+.imageContainer {
+  border: 2px solid rgb(185, 148, 88);
+  background-color: rgb(185, 148, 88);
   position: relative;
-  // left: 55vw;
-  // top: -60vh;
   grid-column: 55/98;
   grid-row: 5/80;
+  display: grid;
+  // justify-items: center;
+  // align-items: center;
 }
 
-.container {
+.image {
+  // border: 2px solid rgb(185, 148, 88);
+  // position: relative;
+  // grid-column: 55/98;
+  // grid-row: 5/80;
+  // display: block;
+  max-height: 100%;
+  max-width: 100%;
+  // height: 100%;
+
+  // align-self: center;
+  // align-self: center;
+  // justify-self: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.otherImagesContainer {
+  grid-column: 55/98;
+  grid-row: 81/90;
+  border: 1px solid rgb(185, 148, 88);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 90px));
+  justify-content: center;
+}
+
+.otherImageSpan {
+  // text-decoration: none;
+  // border: 1px solid rgb(185, 148, 88);
+  // position: relative;
+  // overflow: hidden;
+  // font-size: 1.5rem;
+  // margin-left: 1rem;
+  // margin-right: 1rem;
+  margin-left: 4px;
+  margin-right: 4px;
+  // color: #f4f4f4;
+  // text-transform: uppercase;
+  // grid-column: 50/98;
+  // grid-row: 80/92;
+  position: relative;
+  border: 1px solid white;
+}
+
+.otherImage {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .otherImage:hover {
+//   box-shadow: 1px 1px 25px 10px rgba(185, 148, 88, 0.4);
+// }
+
+// .otherImage:before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: -100%;
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(
+//     120deg,
+//     transparent,
+//     rgba(185, 148, 88, 0.4),
+//     transparent
+//   );
+//   transition: all 650ms;
+// }
+
+// .otherImage:hover:before {
+//   left: 100%;
+// }
+
+.btnContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  // top: -57vh;
-  // left: 26vw;
   grid-column: 55/98;
-  grid-row: 80/95;
+  grid-row: 92/98;
 }
 
 a {
@@ -61,13 +130,13 @@ a {
 
 .btn {
   text-decoration: none;
-  border: 1px solid rgb(146, 148, 248);
+  border: 1px solid rgb(185, 148, 88);
   position: relative;
   overflow: hidden;
 }
 
 .btn:hover {
-  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  box-shadow: 1px 1px 25px 10px rgba(185, 148, 88, 0.4);
 }
 
 .btn:before {
@@ -80,7 +149,7 @@ a {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(146, 148, 248, 0.4),
+    rgba(185, 148, 88, 0.4),
     transparent
   );
   transition: all 650ms;
@@ -88,11 +157,4 @@ a {
 
 .btn:hover:before {
   left: 100%;
-}
-
-body {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(https://images.pexels.com/photos/2166927/pexels-photo-2166927.jpeg?cs=srgb&dl=animal-aquarium-aquatic-2166927.jpg&fm=jpg)
-      no-repeat center center/cover;
-  font-family: Arial, Helvetica, sans-serif;
 }
