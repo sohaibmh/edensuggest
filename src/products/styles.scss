@@ -7,12 +7,30 @@
   display: grid;
   grid-template-columns: repeat(100, 1%);
   grid-template-rows: repeat(100, 1%);
+  align-self: center;
+  position: relative;
+}
+
+.homepageIcon {
+  position: relative;
+  left: -500%;
+  top: -25px;
+  min-height: 15px;
+  min-width: 15px;
+  image-resolution: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .homepageIcon {
+    left: 100%;
+  }
 }
 
 .description {
   text-align: justify;
   grid-column: 3/50;
   grid-row: 15/95;
+  overflow: auto;
 }
 
 .title {
@@ -22,6 +40,7 @@
 }
 
 .imageContainer {
+  border: 0.1px solid rgb(185, 148, 88);
   background-color: rgb(185, 148, 88);
   position: relative;
   grid-column: 55/98;
@@ -75,18 +94,15 @@
   grid-row: 92/98;
 }
 
-a {
-  font-size: 1.5rem;
-  padding: 1rem 3rem;
-  color: #f4f4f4;
-  text-transform: uppercase;
-}
-
 .btn {
   text-decoration: none;
   border: 1px solid rgb(185, 148, 88);
   position: relative;
   overflow: hidden;
+  text-transform: uppercase;
+  padding: 1.5% 5%;
+  cursor: pointer;
+  color: white;
 }
 
 .btn:hover {
@@ -94,7 +110,7 @@ a {
 }
 
 .btn:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;

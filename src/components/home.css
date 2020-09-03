@@ -1,0 +1,17 @@
+.autoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.autoInput {
+  width: 40%;
+  height: 45px;
+  text-align: center;
+  border-color: greenyellow;
+}
+
+.autoResults {
+  width: 40%;
+}
