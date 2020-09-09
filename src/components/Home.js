@@ -65,14 +65,16 @@ const Home = () => {
               })
               .map((value, i) => {
                 return (
-                  <div
-                    onClick={() => setSearchValue(value.product)}
-                    key={i}
-                    tabIndex="0"
-                    className="border-solid border-2 rounded-lg justify-start border-gray-100"
-                  >
-                    <Link to={`/${value.product}`}>{value.product}</Link>
-                  </div>
+                  <Link to={`/${value.product}`}>
+                    <div
+                      onClick={() => setSearchValue(value.product)}
+                      key={i}
+                      tabIndex="0"
+                      className="border-solid border-2 rounded-lg justify-start border-gray-100"
+                    >
+                      {value.product}
+                    </div>
+                  </Link>
                 );
               })}
           </div>
